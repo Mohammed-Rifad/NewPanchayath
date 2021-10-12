@@ -1,0 +1,28 @@
+{% extends 'Common/CommonMaster.html' %}
+
+{% block content%}
+
+<form method="POST" action="{% url 'e_nursery:login' %}" style="color: white; margin-top: 40px; margin-left: 200px;">
+    {% csrf_token %}
+    <p style="color: red;">{{msg}}</p>
+<table style="border-spacing: 20px;border-collapse: separate;">
+    <tr>
+        <td>
+            {{form.login_id.label}}
+        </td>
+        <td>
+            {{form.login_id}}
+        </td>
+        <tr>
+            <td>
+                {{form.login_passwd.label}}
+            </td>
+            <td>
+                {{form.login_passwd}}
+            </td>
+    </tr>
+</table>
+
+<input type="submit" value="Login" class="btn btn-primary" style="margin-left: 60px;"/>
+</form>
+{% endblock %}

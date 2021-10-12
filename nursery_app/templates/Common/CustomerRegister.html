@@ -1,0 +1,41 @@
+{% extends 'Common/CommonMaster.html' %}
+
+{% block content%}
+
+<form method="Post" action="{% url 'e_nursery:cust_reg' %}" enctype="multipart/form-data" class="frm">
+    {% csrf_token %}
+    {{msg}}
+    <table class="tb text-white" style="margin-left: 250px;" >
+        <tr>
+           <td>{{form.cust_name.label}}</td>
+           <td>{{form.cust_name}}</td>
+        </tr>
+        <tr>
+            <td>{{form.cust_address.label}}</td>
+            <td>{{form.cust_address}}</td>
+        </tr>
+        <tr>
+            <td>{{form.cust_phno.label}}</td>
+            <td>{{form.cust_phno}}</td>
+        </tr>
+        <tr>
+            <td>{{form.cust_email.label}}</td>
+            <td>{{form.cust_email}}</td>
+        </tr>
+        <tr>
+            <td>{{form.cust_passwd.label}}</td>
+            <td>{{form.cust_passwd}}</td>
+        </tr>
+        <tr>
+            <td>{{form.cust_img.label}}</td>
+            <td>{{form.cust_img}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add" class="btn btn-primary"></td>
+        </tr>
+    </table>
+
+   </form>
+
+{% endblock %}
