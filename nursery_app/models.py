@@ -1,4 +1,4 @@
-from nursery_app.views.CustomerViews import ProductDetails
+
 from django import db
 from django.db import models
 from django.db.models.base import Model
